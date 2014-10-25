@@ -46,7 +46,7 @@ void introduzir_nova_planta(){
 	
 
 
-
+// ola ta tudo 
 
 // tentativa de menu
 	char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
