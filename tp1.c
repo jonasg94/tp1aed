@@ -4,10 +4,7 @@
 	#define Max 20
 	int main(){
 		int i=0,j, n_planta[Max],opcao;
-		int total_de_plantas=0;
-		float preco;
-		char tipo_planta; 
-		
+	
 /*	
 void listar_plantas(){
 	int n_planta, total_de_plantas;
@@ -63,15 +60,14 @@ void introduzir_nova_planta(){
 		switch(opcao){
 			case 1:
 				printf("Introduzir codigo\n");
-				scanf("%d", & n_plantas[i])
+				scanf("%d", & n_planta[i]);
 				for(j=0; j<=i;j++){
-					if(n_plantas[j] == n_planta[i]){
+					if(n_planta[j] == n_planta[i]){
 					
 						printf("Código já existente\n");
 						break;
 						}
-					
-				i+;
+				i++;
 				break;
 				}
 				listar_plantas();
