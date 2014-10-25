@@ -1,18 +1,12 @@
 	#include<stdio.h>
 	#include<stdlib.h>
 	#include<string.h>
-	
+	#define Max 20
 	int main(){
-		int i, n_planta,opcao;
+		int i=0,j, n_planta[Max],opcao;
 		int total_de_plantas=0;
 		float preco;
 		char tipo_planta; 
-		
-		
-		
-		
-		
-		
 		
 /*	
 void listar_plantas(){
@@ -30,13 +24,13 @@ void introduzir_nova_planta(){
 	
 	printf("Introduz os dados da nova planta\n\n");
 	
-	printf("N√∫mero da planta:  ");
+	printf("Numero da planta:  ");
 	scanf("%i", & n_planta);
 	
-	// Verifica se o numero da planta inserido j√° est√° em utiliza√ß√£o
+	// Verifica se o numero da planta inserido ja° esta° em utilizacao
 	for(i=0; i<total_de_plantas; i++){
 		if(n_planta == planta[i].planta){
-			printf("Erro: n√∫mero j√° exstente.\nIntroduza novo n√∫mero:  ");
+			printf("Erro: numero ja° exstente.\nIntroduza novo numero:  ");
 			scanf("%i",& n_planta);
 			i = -1;
 		}	
@@ -57,15 +51,29 @@ void introduzir_nova_planta(){
 	char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
 
 	do {
-		printf(menu);
+		printf("Menu\n");
+		printf("1 - Introduzir nova planta\n");
+		printf("2 - Listar plantas\n");
+		printf("3 - Listar plantas por codigo\n");
+		printf("0 - Para terminar o prgrama\n");
+		
 		scanf("%i",& opcao);
 		
 		system("CLS");
 		switch(opcao){
 			case 1:
-				introduzir_nova_planta();
+				printf("Introduzir codigo\n");
+				scanf("%d", & n_plantas[i])
+				for(j=0; j<=i;j++){
+					if(n_plantas[j] == n_planta[i]){
+					
+						printf("CÛdigo j· existente\n");
+						break;
+						}
+					
+				i+;
 				break;
-			case 2:
+				}
 				listar_plantas();
 				break;
 			case 3:
