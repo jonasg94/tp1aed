@@ -8,6 +8,13 @@
 		float preco;
 		char tipo_planta; 
 		
+		
+		
+		
+		
+		
+		
+/*	
 void listar_plantas(){
 	int n_planta, total_de_plantas;
 	for(i=0; i<total_de_plantas; i++){
@@ -26,7 +33,7 @@ void introduzir_nova_planta(){
 	printf("Número da planta:  ");
 	scanf("%i", & n_planta);
 	
-	// Verifica se o número da planta inserido já está em utilização
+	// Verifica se o numero da planta inserido já está em utilização
 	for(i=0; i<total_de_plantas; i++){
 		if(n_planta == planta[i].planta){
 			printf("Erro: número já exstente.\nIntroduza novo número:  ");
@@ -42,11 +49,9 @@ void introduzir_nova_planta(){
 	
 	total_de_plantas++;
 	}
-	}
 	
+	*/
 
-
-// ola ta tudo 
 
 // tentativa de menu
 	char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
@@ -76,3 +81,4 @@ void introduzir_nova_planta(){
 	} while(opcao!=0);
 	
 	return 0;
+}
