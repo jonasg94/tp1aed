@@ -55,26 +55,28 @@ void introduzir_nova_planta(){
 		printf("1 - Introduzir nova planta\n");
 		printf("2 - Listar plantas\n");
 		printf("3 - Listar plantas por codigo\n");
-		printf("0 - Para terminar o prgrama\n");
+		printf("0 - Para terminar o programa\n");
 		
 		scanf("%i",& opcao);		
 		system("CLS");
 		switch(opcao){
 			case 1:
 				printf("Introduzir codigo\n");
+				i=0;
 				scanf("%d", & n_planta[i]);
 				for(j=0; j<=i;j++){
-					if(n_planta[j] == n_planta[i]){
+					if ( i != 0 ){
+						if(n_planta[j] == n_planta[i]){
 					
-						printf("Código já existente\n");
-						break;
-						}
-				i++;
-				}	
-				listar_plantas();
-				break;
-			case 3:
-				listar_planta();
+						printf("Codigo ja existente\n");
+						system ("pause");
+						
+					}
+					}
+					printf ("%d", n_planta[i]);
+					system ("pause");
+				}
+				i++;	
 				break;
 			
 			default:
