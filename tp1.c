@@ -3,7 +3,10 @@
 	#include<string.h>
 	#define Max 20
 	int main(){
-		int i=0,j, n_planta[Max],opcao;
+		int i=0;
+		int j=0;
+		int n_planta[Max];
+		int opcao=0;
 	
 /*	
 void listar_plantas(){
@@ -45,7 +48,7 @@ void introduzir_nova_planta(){
 
 
 // tentativa de menu
-	char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
+	//char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
 
 	do {
 		printf("Menu\n");
@@ -54,8 +57,7 @@ void introduzir_nova_planta(){
 		printf("3 - Listar plantas por codigo\n");
 		printf("0 - Para terminar o prgrama\n");
 		
-		scanf("%i",& opcao);
-		
+		scanf("%i",& opcao);		
 		system("CLS");
 		switch(opcao){
 			case 1:
@@ -68,8 +70,7 @@ void introduzir_nova_planta(){
 						break;
 						}
 				i++;
-				break;
-				}
+				}	
 				listar_plantas();
 				break;
 			case 3:
@@ -79,8 +80,8 @@ void introduzir_nova_planta(){
 			default:
 				break;
 		}
-		printf("\n\n\npressione uma tecla para continuar..."); 
-		getch();
+		printf("\n\n\n pressione uma tecla para continuar..."); 
+		getchar();
 		system("CLS");
 	} while(opcao!=0);
 	
