@@ -2,13 +2,7 @@
 	#include<stdlib.h>
 	#include<string.h>
 	#define Max 20
-	int main(){
-		int i=0;
-		int j=0;
-		int n_planta[Max];
-		int opcao=0;
-	
-/*	
+
 void listar_plantas(){
 	int n_planta, total_de_plantas;
 	for(i=0; i<total_de_plantas; i++){
@@ -44,7 +38,14 @@ void introduzir_nova_planta(){
 	total_de_plantas++;
 	}
 	
-	*/
+
+
+	int main(){
+		int i=0;
+		int j=0;
+		int n_planta[Max];
+		int opcao=0;
+	
 
 
 // tentativa de menu
@@ -61,7 +62,7 @@ void introduzir_nova_planta(){
 		system("CLS");
 		switch(opcao){
 			case 1:
-				printf("Introduzir codigo\n");
+				/*printf("Introduzir codigo\n");
 				i=0;
 				scanf("%d", & n_planta[i]);
 				for(j=0; j<=i;j++){
@@ -76,7 +77,7 @@ void introduzir_nova_planta(){
 					printf ("%d", n_planta[i]);
 					system ("pause");
 				}
-				i++;	
+				i++;	*/
 				break;
 			
 			default:
