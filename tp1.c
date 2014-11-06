@@ -1,38 +1,92 @@
-#include <stdio.h>
-#include <stdlib.h>
-#define Max 20
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include<string.h>
+	#define Max 20
 
-int introduzir_nova_planta(int j){
-    int codigo_planta[Max],num_plant_stock[Max],i=0;
-    char tipo_planta[Max];
-    float preco_planta[Max];
-    int variavel_auxiliar;
-    printf ("Introduza o codigo da planta\n");
-    scanf("%i", & variavel_auxiliar);
-    for(i=0; i<=j;i++){
-        if (j!=0){
-            while (variavel_auxiliar == codigo_planta [i]){
-                printf("Codigo Repetido\nIntroduza novo codigo\n");
-                scanf("%i", &variavel_auxiliar);
-                i=0;
-            }
-        }
-    }
-    codigo_planta[j]=variavel_auxiliar;
-    
-    /*printf("Introduza o tipo de planta\n I para interior\n E para exterior\n e m para misto\n ");
-    scanf("%c",& tipo_planta[j]);
-    printf("Introduza o preco da planta\n");
-    scanf ("%f",& preco_planta[j]);*/
-    
-    
-    j++;
-    return j;
-}
+void listar_plantas(){
+	int n_planta, total_de_plantas;
+	for(i=0; i<total_de_plantas; i++){
+		printf("Numero de plantas: %i\n", planta[i].n_planta);
+	}
+	}
 
-int main(){
-    int i;
-    int j=0;
-    for (i=0; i<Max; i++)
-        j = introduzir_nova_planta(j);
+void introduzir_nova_planta(){
+	
+	char tipo_planta;
+	float preco;
+	int n_planta,i, total_de_plantas;
+	
+	printf("Introduz os dados da nova planta\n\n");
+	
+	printf("Numero da planta:  ");
+	scanf("%i", & n_planta);
+	
+	// Verifica se o numero da planta inserido ja¡ esta¡ em utilizacao
+	for(i=0; i<total_de_plantas; i++){
+		if(n_planta == planta[i].planta){
+			printf("Erro: numero ja¡ exstente.\nIntroduza novo numero:  ");
+			scanf("%i",& n_planta);
+			i = -1;
+		}	
+	}
+	
+
+	planta[total_de_plantas].preco = 0;
+	planta[total_de_plantas].n_planta = 0;
+	planta[total_de_plantas].tipo_planta=tipo_planta;
+	
+	total_de_plantas++;
+	}
+	
+
+
+	int main(){
+		int i=0;
+		int j=0;
+		int n_planta[Max];
+		int opcao=0;
+	
+
+
+// tentativa de menu
+	//char menu[] = "  1 - Introduzir nova planta\n  2 - Listar plantas\n  3 - Listar planta por codigo\n Escreve 0 para terminar o programa\n";
+
+	do {
+		printf("Menu\n");
+		printf("1 - Introduzir nova planta\n");
+		printf("2 - Listar plantas\n");
+		printf("3 - Listar plantas por codigo\n");
+		printf("0 - Para terminar o programa\n");
+		
+		scanf("%i",& opcao);		
+		system("CLS");
+		switch(opcao){
+			case 1:
+				/*printf("Introduzir codigo\n");
+				i=0;
+				scanf("%d", & n_planta[i]);
+				for(j=0; j<=i;j++){
+					if ( i != 0 ){
+						if(n_planta[j] == n_planta[i]){
+					
+						printf("Codigo ja existente\n");
+						system ("pause");
+						
+					}
+					}
+					printf ("%d", n_planta[i]);
+					system ("pause");
+				}
+				i++;	*/
+				break;
+			
+			default:
+				break;
+		}
+		printf("\n\n\n pressione uma tecla para continuar..."); 
+		getchar();
+		system("CLS");
+	} while(opcao!=0);
+	
+	return 0;
 }
